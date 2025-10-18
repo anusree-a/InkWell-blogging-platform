@@ -11,7 +11,7 @@ export function DeleteButton({ postId }: { postId: number }) {
     if (confirm('Are you sure you want to delete this post?')) {
       try {
         await deleteMutation.mutateAsync({ id: postId });
-        router.refresh(); // Refresh server component
+        router.refresh(); 
       } catch (error) {
         alert('Failed to delete post');
       }

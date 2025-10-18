@@ -12,7 +12,7 @@ function generateSlug(title: string): string {
 }
 
 export const postRouter = router({
-  // Get all posts - OPTIMIZED
+  
   getAll: publicProcedure
     .input(z.object({
       published: z.boolean().optional(),

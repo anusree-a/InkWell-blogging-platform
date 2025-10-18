@@ -96,7 +96,7 @@ export default function EditPostPage() {
         <h1 className="text-4xl font-bold mb-8 text-gray-900">Edit Post</h1>
 
         <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm p-8 space-y-6">
-          {/* Title */}
+         
           <div>
             <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
               Post Title *
@@ -112,7 +112,7 @@ export default function EditPostPage() {
             />
           </div>
 
-          {/* Content - BLACK TEXT */}
+          
           <div>
             <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
               Content *
@@ -152,7 +152,7 @@ export default function EditPostPage() {
             </div>
           </div>
 
-          {/* Published Status */}
+          {}
           <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
             <input
               id="published"
@@ -166,7 +166,7 @@ export default function EditPostPage() {
             </label>
           </div>
 
-          {/* Submit Buttons */}
+          
           <div className="flex gap-4 pt-4">
             <button
               type="submit"

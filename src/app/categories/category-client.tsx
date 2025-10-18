@@ -19,7 +19,7 @@
   export function CategoryClient({ initialCategories }: CategoryClientProps) {
     const [isCreating, setIsCreating] = useState(false);
     const [editingId, setEditingId] = useState<number | null>(null);
-    const [deletingId, setDeletingId] = useState<number | null>(null); // ✅ Track which one is deleting
+    const [deletingId, setDeletingId] = useState<number | null>(null); 
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
 
@@ -74,7 +74,7 @@
 
     const handleDelete = async (id: number) => {
       if (confirm('Are you sure? This will remove the category from all posts.')) {
-        setDeletingId(id); // ✅ Set which one is being deleted
+        setDeletingId(id); // Set which one is being deleted
         try {
           await deleteMutation.mutateAsync({ id });
           utils.category.getAll.invalidate();
@@ -82,7 +82,7 @@
         } catch (error) {
           alert('Failed to delete category');
         } finally {
-          setDeletingId(null); // ✅ Clear after done
+          setDeletingId(null); // Clear after done
         }
       }
     };
@@ -206,10 +206,10 @@
                         </button>
                         <button
                           onClick={() => handleDelete(category.id)}
-                          disabled={deletingId === category.id} // ✅ Only disable THIS button
+                          disabled={deletingId === category.id} // Only disable THIS button
                           className="px-4 py-2 bg-red-600 text-white hover:bg-red-700 rounded-lg transition text-sm disabled:opacity-50"
                         >
-                          {deletingId === category.id ? 'Deleting...' : 'Delete'} {/* ✅ Only show "Deleting..." for THIS button */}
+                          {deletingId === category.id ? 'Deleting...' : 'Delete'} {}
                         </button>
                       </div>
                     </div>

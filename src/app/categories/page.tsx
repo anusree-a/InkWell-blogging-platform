@@ -8,7 +8,7 @@ export const revalidate = 0;
 export default async function CategoriesPage() {
   const allCategories = await db.select().from(categories);
 
-  // 🧠 Convert Date → string to make it serializable for the client
+  
   const formattedCategories = allCategories.map((cat) => ({
     ...cat,
     createdAt: cat.createdAt ? cat.createdAt.toISOString() : null,

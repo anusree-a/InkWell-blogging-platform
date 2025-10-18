@@ -4,7 +4,7 @@ import { trpc } from '@/lib/trpc';
 import Link from 'next/link';
 import { useState } from 'react';
 
-// ✅ Changed to 'any' to avoid type conflicts
+
 interface PostsClientProps {
   initialPosts: any[];
   initialCategories: any[];

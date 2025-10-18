@@ -12,7 +12,7 @@ export function Navigation() {
     <nav className="bg-white border-b shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-white/90">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo with pen icon */}
+          
           <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-blue-600 hover:text-blue-700 transition">
             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
               <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
@@ -35,7 +35,7 @@ export function Navigation() {
             </svg>
           </button>
 
-          {/* Desktop menu */}
+         
           <div className="hidden md:flex gap-8">
             <Link 
               href="/" 

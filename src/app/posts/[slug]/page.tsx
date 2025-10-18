@@ -63,7 +63,7 @@ export default function PostPage() {
             ))}
           </div>
 
-          {/* Metadata */}
+          
           <div className="text-gray-600 text-sm">
             Published on {new Date(post.createdAt!).toLocaleDateString('en-US', {
               year: 'numeric',

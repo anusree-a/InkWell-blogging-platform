@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Inkwell - Where Stories Come to Life',
   description: 'A modern blogging platform for writers. Share your stories with the world.',
   icons: {
-    icon: '/favicon.ico', // We'll create a custom one
+    icon: '/favicon.ico', 
   },
 };
 

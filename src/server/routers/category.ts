@@ -4,7 +4,7 @@ import { db } from '@/db';
 import { categories } from '@/db/schema';
 import { eq } from 'drizzle-orm';
 
-// ✅ Add the generateSlug function
+
 function generateSlug(name: string): string {
   return name
     .toLowerCase()
@@ -41,7 +41,7 @@ export const categoryRouter = router({
     .mutation(async ({ input }) => {
       const { id, ...updateData } = input;
       
-      // ✅ Generate new slug if name is being updated
+      
       if (updateData.name) {
         (updateData as any).slug = generateSlug(updateData.name);
       }

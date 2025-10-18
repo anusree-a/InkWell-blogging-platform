@@ -58,7 +58,7 @@ export default async function DashboardPage() {
           </div>
         </div>
 
-        {/* Posts List */}
+       
         <div className="bg-white rounded-lg shadow">
           <div className="p-6 border-b">
             <h2 className="text-xl font-semibold text-gray-900">All Posts</h2>
