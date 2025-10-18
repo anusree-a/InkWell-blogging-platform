@@ -5,11 +5,13 @@ import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
-export default async function PostsPage(
-  props: { searchParams?: Promise<{ category?: string }> }
-) {
-  const searchParams = await props.searchParams;
-  const categorySlug = searchParams?.category;
+interface PageProps {
+  searchParams: Promise<{ category?: string }>;
+}
+
+export default async function PostsPage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const categorySlug = params?.category;
 
   // Fetch all posts and categories
   const [allPosts, allCategories] = await Promise.all([
