@@ -6,34 +6,34 @@
 - **React Query** (TanStack Query) - Server state management via tRPC
 - **React Hooks** - Local component state
 
-## ✨ Features Implemented
+##  Features Implemented
 
-### 🔴 Priority 1 (Must Have) - ✅ Complete
-- ✅ Blog post CRUD operations (create, read, update, delete)
-- ✅ Category CRUD operations
-- ✅ Assign multiple categories to posts
-- ✅ Blog listing page with all posts
-- ✅ Individual post view page
-- ✅ Category filtering on listing page
-- ✅ Responsive navigation with mobile menu
-- ✅ Clean, professional UI
+###  Priority 1 (Must Have) - Complete
+-  Blog post CRUD operations (create, read, update, delete)
+-  Category CRUD operations
+-  Assign multiple categories to posts
+-  Blog listing page with all posts
+-  Individual post view page
+-  Category filtering on listing page
+-  Responsive navigation with mobile menu
+-  Clean, professional UI
 
-### 🟡 Priority 2 (Should Have) - ✅ Complete
-- ✅ Landing page with Hero, Features, and Footer sections
-- ✅ Dashboard for managing posts
-- ✅ Draft vs Published post status
-- ✅ Loading and error states throughout
-- ✅ Fully mobile-responsive design
-- ✅ Markdown-friendly content editor
+###  Priority 2 (Should Have) - Complete
+-  Landing page with Hero, Features, and Footer sections
+-  Dashboard for managing posts
+-  Draft vs Published post status
+-  Loading and error states throughout
+-  Fully mobile-responsive design
 
-### 🟢 Priority 3 (Nice to Have) - Implemented
-- ✅ Enhanced landing page with CTA section
-- ✅ Real-time updates (no page refresh needed)
-- ✅ Optimistic UI updates
-- ✅ Category post counts
-- ✅ Featured stories section
 
-## 📁 Project Structure
+###  Priority 3 (Nice to Have) - Implemented
+-  Enhanced landing page with CTA section
+-  Real-time updates (no page refresh needed)
+-  Optimistic UI updates
+-  Category post counts
+-  Featured stories section
+
+##  Project Structure
 ```
 blog-platform/
 ├── src/
@@ -65,7 +65,7 @@ blog-platform/
 └── tsconfig.json
 ```
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ### Posts Table
 ```typescript
@@ -97,7 +97,7 @@ blog-platform/
 **Relationships:**
 - Posts ↔ Categories: Many-to-Many via post_categories junction table
 
-## 🔧 tRPC Router Structure
+##  tRPC Router Structure
 
 ### Post Router (`/api/trpc/post.*`)
 ```typescript
@@ -117,13 +117,13 @@ category.delete  - Delete category
 ```
 
 **Features:**
-- ✅ End-to-end type safety with automatic inference
-- ✅ Zod schema validation on all inputs
-- ✅ Proper error handling with user-friendly messages
-- ✅ Automatic slug generation for posts and categories
-- ✅ Cascade deletion of relationships
+-  End-to-end type safety with automatic inference
+-  Zod schema validation on all inputs
+-  Proper error handling with user-friendly messages
+-  Automatic slug generation for posts and categories
+-  Cascade deletion of relationships
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ installed
@@ -178,7 +178,7 @@ category.delete  - Delete category
    
    Navigate to `http://localhost:3000`
 
-## 📦 Available Scripts
+##  Available Scripts
 ```bash
 npm run dev          # Start development server
 npm run build        # Build for production
@@ -189,7 +189,7 @@ npm run db:push      # Push schema to database
 npm run db:seed      # Seed database with sample data
 ```
 
-## 🌐 Deployment
+##  Deployment
 
 ### Deploy to Vercel
 
@@ -207,9 +207,9 @@ npm run db:seed      # Seed database with sample data
    - Add environment variable: `DATABASE_URL`
    - Click "Deploy"
 
-3. **Your app is live!** 🎉
+3. **Your app is live!** 
 
-## 💡 Key Design Decisions
+##  Key Design Decisions
 
 ### Why tRPC?
 - **Type Safety**: Automatic type inference from server to client
@@ -236,7 +236,7 @@ npm run db:seed      # Seed database with sample data
 - **Client State**: React hooks (useState) for UI state
 - **No Zustand needed**: React Query handles caching/invalidation
 
-## 🎯 Performance Optimizations
+## Performance Optimizations
 
 1. **Server-Side Rendering**: All pages pre-rendered on server
 2. **Data Caching**: React Query caches API responses
@@ -244,7 +244,7 @@ npm run db:seed      # Seed database with sample data
 4. **Code Splitting**: Next.js automatically splits code
 5. **Image Optimization**: Next.js Image component (if images added)
 
-## 🐛 Known Limitations & Trade-offs
+##  Known Limitations & Trade-offs
 
 1. **No Authentication**: Focus was on core blogging features (as specified)
 2. **Basic Editor**: Textarea-based, not rich text (time-saving decision)
@@ -252,12 +252,12 @@ npm run db:seed      # Seed database with sample data
 4. **No Pagination**: All posts loaded at once (fine for MVP)
 5. **No Search**: Could be added as a bonus feature
 
-## 🔐 Security Considerations
+##  Security Considerations
 
-- ✅ SQL Injection protection (Drizzle ORM parameterized queries)
-- ✅ XSS protection (React escapes by default)
-- ✅ Input validation (Zod schemas on all API inputs)
-- ✅ Type safety (TypeScript prevents type-related bugs)
+-  SQL Injection protection (Drizzle ORM parameterized queries)
+-  XSS protection (React escapes by default)
+-  Input validation (Zod schemas on all API inputs)
+- Type safety (TypeScript prevents type-related bugs)
 
 ## 📊 Testing
 
@@ -284,35 +284,15 @@ To test all features:
    - Delete a post
    - Create draft, then publish it
 
-## 🤝 Contributing
 
-This is an assessment project. For production use:
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-## 📝 License
-
-MIT License - feel free to use this for learning!
 
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [anusree-a](https://github.com/anusree-a)
+- LinkedIn: [Anusree A](www.linkedin.com/in/anusree771)
 
-## ⏱️ Time Spent
 
-**Total Time**: ~14 hours
-
-**Breakdown:**
-- Setup & Backend (Day 1-2): 5 hours
-- Core Features (Day 3-4): 5 hours
-- Polish & UI (Day 5-6): 3 hours
-- Deployment & Documentation (Day 7): 1 hour
 
 ## 🙏 Acknowledgments
 
@@ -323,4 +303,3 @@ MIT License - feel free to use this for learning!
 
 ---
 
-**Built with ❤️ using modern web technologies**
