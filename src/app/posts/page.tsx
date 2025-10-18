@@ -5,12 +5,11 @@ import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
-interface PageProps {
-  searchParams: { category?: string };
-}
-
-export default async function PostsPage({ searchParams }: PageProps) {
-  const categorySlug = searchParams.category;
+export default async function PostsPage(
+  props: { searchParams?: Promise<{ category?: string }> }
+) {
+  const searchParams = await props.searchParams;
+  const categorySlug = searchParams?.category;
 
   // Fetch all posts and categories
   const [allPosts, allCategories] = await Promise.all([
@@ -45,7 +44,8 @@ export default async function PostsPage({ searchParams }: PageProps) {
             <h1 className="text-4xl font-bold text-gray-900">Blog Posts</h1>
             {selectedCategory && (
               <p className="text-gray-600 mt-2">
-                Showing posts in: <span className="font-semibold">{selectedCategory.name}</span>
+                Showing posts in:{' '}
+                <span className="font-semibold">{selectedCategory.name}</span>
               </p>
             )}
           </div>
@@ -56,7 +56,7 @@ export default async function PostsPage({ searchParams }: PageProps) {
             + New Post
           </Link>
         </div>
-        
+
         {/* Category Filter */}
         <div className="mb-8 flex gap-2 flex-wrap">
           <Link
@@ -106,8 +106,8 @@ export default async function PostsPage({ searchParams }: PageProps) {
                 </p>
                 <div className="flex gap-2 flex-wrap mb-3">
                   {post.postCategories?.map(pc => (
-                    <span 
-                      key={pc.categoryId} 
+                    <span
+                      key={pc.categoryId}
                       className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full"
                     >
                       {pc.category?.name || 'Uncategorized'}
@@ -118,7 +118,7 @@ export default async function PostsPage({ searchParams }: PageProps) {
                   {new Date(post.createdAt!).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
-                    day: 'numeric'
+                    day: 'numeric',
                   })}
                 </div>
               </Link>
@@ -127,7 +127,7 @@ export default async function PostsPage({ searchParams }: PageProps) {
         ) : (
           <div className="text-center py-12">
             <p className="text-gray-500 mb-4">
-              {categorySlug 
+              {categorySlug
                 ? `No posts found in "${selectedCategory?.name}" category.`
                 : 'No posts found. Create your first post!'}
             </p>
