@@ -60,7 +60,7 @@ export default async function HomePage() {
             </div>
 
            
-            <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+            {/* <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
               <div>
                 <div className="text-4xl font-bold mb-1">{latestPosts.length}+</div>
                 <div className="text-blue-200 text-sm">Published Posts</div>
@@ -73,7 +73,7 @@ export default async function HomePage() {
                 <div className="text-4xl font-bold mb-1">∞</div>
                 <div className="text-blue-200 text-sm">Possibilities</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
